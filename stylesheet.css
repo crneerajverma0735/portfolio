@@ -1,0 +1,305 @@
+:root {
+  --mainRed: #be3144;
+  --mainWhite: #f0f0f0;
+  --mainBlue: #45567d;
+  --darkGrey: #303841;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Arvo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========navbar================ */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--mainRed);
+  width: 100%;
+  z-index: 1;
+}
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#navbar ul li {
+  list-style-type: none;
+}
+
+/* #navbar ul li a {
+    text-decoration: none;
+    display: block;
+    float: right;
+    font-size: 1.5rem;
+    color: var(--mainWhite);
+    padding: 15px 20px;
+    border: 1px solid black;
+  } */
+
+#navbar ul li a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+  color: var(--mainWhite);
+  padding: 12px 20px;
+}
+
+#navbar ul li a:hover {
+  background-color: var(--mainBlue);
+}
+
+/* ================ Main ====================== */
+
+/* =================== Welcome section=========== */
+
+main #welcome-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+#welcome-section h1 {
+  color: var(--mainWhite);
+  font-size: 4rem;
+  margin: 0;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+#welcome-section p {
+  color: var(--mainRed);
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* =============== Project Section=========== */
+
+#projects {
+  background-color: var(--mainBlue);
+  margin: 0;
+  padding: 20px;
+}
+
+#projects h1 {
+  color: var(--mainWhite);
+  text-align: center;
+  font-size: 2.7rem;
+  padding: 70px 0 0 0;
+  border-bottom: 3px solid var(--mainWhite);
+  font-family: "PT Sans Caption", sans-serif;
+  width: 52%;
+  margin: 0 auto 35px auto;
+}
+
+#projects #grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-evenly;
+}
+
+#projects #grid .project-grid {
+  background-color: var(--darkGrey);
+  height: 450px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+#projects #grid .project-grid a {
+  text-decoration: none;
+}
+
+.project-img {
+  width: 100%;
+  height: calc(100% - 4.8rem);
+  display: block;
+  object-fit: cover;
+}
+
+.project-tile {
+  text-align: center;
+  color: var(--mainWhite);
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  font-size: 1.3rem;
+}
+
+.project-tile .code {
+  color: var(--darkGrey);
+}
+
+.project-tile:hover .code {
+  color: var(--mainRed);
+}
+
+#projects .btn {
+  text-align: center;
+  padding: 15px 0;
+  color: var(--mainWhite);
+  background-color: var(--darkGrey);
+  display: block;
+  width: 150px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 15px auto 25px auto;
+  border-radius: 5px;
+}
+
+/* =============== Contact Us ============== */
+
+#contact-us {
+  background: var(--darkGrey);
+  text-align: center;
+  margin: 0;
+  padding-top: 30vh;
+}
+
+#contact-us h1 {
+  color: var(--mainWhite);
+  margin: 0;
+  font-size: 4rem;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+#contact-us > p {
+  color: var(--mainWhite);
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+#contact-us .flex-contact {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0 160px 0;
+}
+
+.flex-contact .flex-link {
+  padding: 10px 20px;
+  transition: all 0.5s linear;
+  font-family: "Oxygen", sans-serif;
+}
+
+.flex-link > a {
+  color: var(--mainWhite);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.flex-link i {
+  color: var(--mainWhite);
+  padding-right: 5px;
+}
+
+.flex-link:hover {
+  transform: translate(0, 13px);
+}
+
+/* ============ contact us Footer========== */
+
+#contact-us #footer {
+  border-top: 3px solid var(--mainRed);
+  margin: 0;
+}
+
+#footer .flex-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 45px 0;
+  margin: 0;
+}
+
+.flex-footer .footer-details,
+.footer-copyright {
+  color: var(--mainWhite);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.footer-copyright a {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+
+/* ======== @media Query less than 800px======== */
+
+@media (max-width: 800px) {
+  #projects #grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  #projects #grid {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: space-around;
+  }
+
+  #projects h1 {
+    font-size: 1.9rem;
+    padding: 70px 0 0 0;
+    border-bottom: 3px solid var(--mainWhite);
+    font-family: "PT Sans Caption", sans-serif;
+    width: 90%;
+    margin: 0 auto 35px auto;
+  }
+
+  #navbar ul li {
+    width: 33.33%;
+    font-size: 1rem;
+  }
+
+  #contact-us h1 {
+    font-size: 3rem;
+  }
+
+  #footer .flex-footer {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .flex-footer .footer-details,
+  .footer-copyright {
+    padding: 10px;
+  }
+
+  #contact-us .flex-contact {
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 0 80px 0;
+  }
+
+  .flex-contact .flex-link {
+    padding: 20px 20px;
+  }
+
+  #welcome-section h1 {
+    font-size: 3rem;
+  }
+}
